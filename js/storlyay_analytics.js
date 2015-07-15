@@ -2,8 +2,8 @@
 (function($) {
 
   $( document ).ready(function() {
-    var pathname = window.location.pathname;
-    $.post( "http://api.storlyay.com/logevent", { event_name: "page_load", uid: pathname, urlreferr: document.referrer} );
+    var url      = window.location.href;
+    $.post( "http://api.storlyay.com/logevent", { event_name: "page_load", uid: url, urlreferr: document.referrer} );
   });
 
 })(jQuery);
